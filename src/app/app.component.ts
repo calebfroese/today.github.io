@@ -14,9 +14,11 @@ export class AppComponent implements OnInit {
   constructor(public http: Http) {}
 
   ngOnInit() {
-    this.poem$ = this.http.get('assets/poem.json', {}).pipe(map(data => {
-      const poems = data.json();
-      return poems[0].content;
-    }));
+    this.poem$ = this.http.get('assets/poem.json', {}).pipe(
+      map(data => {
+        const poems = data.json();
+        return poems[0].content;
+      })
+    );
   }
 }
