@@ -8,7 +8,7 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  day = 'Wednesday';
+  day = 'Thursday';
   poem$: any;
 
   constructor(public http: Http) {}
